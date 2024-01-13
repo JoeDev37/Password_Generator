@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="x-icon" href="logos/lock(1).png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@700&family=Roboto:wght@400;500&family=Rubik+Doodle+Shadow&family=Ubuntu:ital,wght@0,400;0,500;1,300&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee+Spice&family=Caveat:wght@700&family=Dancing+Script&family=Lemon&family=Roboto:wght@400;500&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Ubuntu:ital,wght@0,400;0,500;1,300&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <section>
+
+        <div class="heading-part">
+            <p class="heading-txt">Password Generator</p>
+        </div>
+
+        <div class="input">
+            <input id="text" title="copy" readonly />
+            <button id="changer" onclick="generateRandomPass()" title="change the password"> <img src="icons/rotate-right-solid.svg"> </button>
+            <button id="copy" onclick="copyRandomString()" title="copy the password"> <img src="icons/copy-solid.svg"> </button>
+        </div>
+
+        <div class="the-custom">
+            <p>customize</p>
+        </div>
+
+        <div class="customization">
+
+            <div class="passwordLengthIncrease button" title="increase the password" onclick="if(character_length < 20) character_length++">
+                <img id="inc" src="icons/arrow-up-1-9-solid.svg">
+            </div>
+
+            <div class="passwordLengthDecrease button" title="decrease the password" onclick="if(character_length > 4) character_length--">
+                <img id="dec" src="icons/arrow-down-1-9-solid.svg">
+            </div>
+
+            <div class="theme button" title="Dark/Light" onclick="toggleTheme()">
+                <img id="sett" src="lightbulb-solid(1).svg">
+            </div>
+        </div>
+
+        <div class="the-things">
+            <p>options</p>
+        </div>
+        
+        <div class="option">
+
+            <div id="complete" class="complete button" title="complete password" onclick="generateRandomPass('all')">
+
+                <img id="comp" src="icons/a-solid (1).svg"> - 
+                <img id="comp" src="icons/9-solid (1).svg">
+
+            </div>
+
+            <div id="string" class="string button" title="only letters" onclick="generateRandomPass('letter')">
+
+                <img id="a-z" src="icons/a-solid.svg">-
+                <img id="a-z" src="icons/z-solid.svg">
+
+            </div>
+
+            <div id="number" class="numbers button" title="only numbers" onclick="generateRandomPass('number')">
+
+                 <img id="num" src="icons/0-solid (1).svg"> 
+                 <img id="num" src="icons/0-solid.svg"> 
+                
+            </div>
+        </div>
+
+        <div class="info">
+            <p>
+                Create a secure and user-friendly password generator for crafting strong passwords. Offer customization options, visual strength indicators, and a 'Copy to Clipboard' feature. Prioritize accessibility, adhere to HTTPS standards, and emphasize a no-storage policy. Regularly update, test thoroughly, and promote responsibly. Ensure legal compliance and provide user documentation for a seamless experience.
+            </p>
+        </div>
+
+
+    </section>
+
+    <script src="index.js"> </script>
+
+    <script src="letter.js"></script>
+
+    <script src="number.js"></script>
+
+    <script src="themes.js"></script>
+
+</body>
+</html>
